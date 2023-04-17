@@ -105,22 +105,31 @@ a.nav-link:active, a.foot-link:active {color: var(--white);}
 .brand:hover g {stroke: var(--white);}
 /*--Splash--*/
 #splash {
+  /* background-image: linear-gradient(135deg, #d6d4dd 0%, #ffffff 100%); */
+  background-color: #d6d4dc;
   height: 70vh;
-  background-image: linear-gradient(135deg, #d6d4dd 0%, #ffffff 100%);
   position: relative;
   z-index: 9999;
 }
-/* #splash-bottom {
+#splash-bottom {
   height: 100%;
   width: 100%;
   position: absolute;
   left: 0;
-  background-image: url(../bin-img/otop.png);
+  background-image: url(../bin-img/Victoria-Ranson-largeimageondarkerbg1.jpg);
   background-repeat: no-repeat;
-  background-position: 88% -30px;
-  background-size: contain;
+  background-position: 90% 58px;
+  background-size: 350px;
   animation: tree 6s ease 0s infinite alternate backwards;
-} */
+}
+.image-credit {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  font-size: 14px;
+  background-color: rgba(255,255,255,0.5);
+  padding: 0 5px;
+}
 #splash-top {
   height: 100%;
   width: 100%;
@@ -131,16 +140,16 @@ a.nav-link:active, a.foot-link:active {color: var(--white);}
   background-position: 85% 0;
   background-size: contain;
   z-index: 0;
-  /* animation: statue 6s ease 0s infinite alternate forwards; */
+  animation: statue 6s ease 0s infinite alternate forwards;
 }
-/* @keyframes tree {
+@keyframes tree {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 @keyframes statue {
   0% {opacity: 1;}
   100% {opacity: 0;}
-} */
+}
 .spl-wrap {
   display: flex;
   flex-direction: column;
@@ -166,12 +175,12 @@ a.nav-link:active, a.foot-link:active {color: var(--white);}
 }
 .store-links {
   width: 60%;
-  margin: 3rem auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
     /*-- --*/
-    display: none;
+    /* display: none; */
     /*-- --*/
 }
 .store-link img {
@@ -639,12 +648,23 @@ a:hover.home-btn {
   :root{font-size: 18px;}
   .nav-wrap{flex-direction:column;align-items: center;}
   section:not(#splash) {padding: 2rem 3vw;}
+  .spl-txt h1 {
+    font-size: 2rem;
+  }
+  .spl-txt h2 {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+  #splash-bottom {background-position: 90% 8px;}
   .hist-txt {column-gap: 2em;}
   .resources-wrap {grid-template-columns: repeat(2, 1fr);}
   .credits-wrap {grid-template-columns: repeat(2, 1fr);}
   #info-card {max-width: 50vw;}
 }
 @media screen and (max-width: 768px) {
+  #splash {height: 90vh;}
+  #splash-bottom {background-position: 90% 40%; background-size: 250px;}
+  #splash-top {background-position: 80% 30%; background-size: 120px;}
   .voices-wrap {grid-template-columns: 1fr;}
   .credits-wrap {grid-template-columns: 1fr;}
   .pedagogy-wrap {grid-template-columns: 1fr; grid-gap: 2rem;}
@@ -658,6 +678,8 @@ a:hover.home-btn {
   section:not(#splash) {padding: 1rem 2vw; outline: none;}
   #splash{background-position: 96%;}
   .spl-wrap {margin-left: 0%; width: 100%; background-color: rgba(255,255,255,0.8);}
+  #splash-bottom {background-position: top right; background-size: 250px;}
+  #splash-top {background-position: top right; background-size: 120px;}
   .spl-txt{font-size:115%;}
   .voices-wrap {grid-template-columns: 1fr;}
   .resources-wrap {grid-template-columns: 1fr;}
